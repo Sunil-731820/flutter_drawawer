@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
+    color: Colors.purpleAccent,
     home: HomePage(),
     theme: ThemeData(
       primarySwatch: Colors.purple,
@@ -16,7 +17,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Awesome App"),
+        backgroundColor: Colors.redAccent,
+        title: Text(
+          "Awesome App",
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        ),
       ),
       //body: Container(),
       drawer: Center(
@@ -26,12 +31,19 @@ class HomePage extends StatelessWidget {
               DrawerHeader(
                   child: Text(
                 "Sunil Kumar Gupta",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    backgroundColor: Colors.yellowAccent,
+                    color: Colors.purpleAccent),
               )),
               DrawerHeader(
                   child: Text("Utsav Gupta",
                       style: TextStyle(
-                          fontSize: 30, fontWeight: FontWeight.bold))),
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.purple,
+                          backgroundColor: Colors.yellowAccent))),
             ],
           ),
         ),
